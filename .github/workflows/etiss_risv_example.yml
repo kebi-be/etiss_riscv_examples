@@ -6,7 +6,7 @@ on:
 
 env:
   BUILD_TYPE: Release
-  SEAL5_PREBUILT_DIR: /home/runner/work/seal5_prebuilt
+  SEAL5_PREBUILT_DIR: /home/runner/work/seal5_prebuilt/release
   ETISS_PREBUILT_DIR: /home/runner/work/etiss_prebuilt
   RISCV_GCC_PREFIX: ${{ github.workspace }}/../gnu
   RISCV_GCC_NAME: riscv32-unknown-elf
@@ -42,7 +42,7 @@ jobs:
         github-token: ${{ secrets.REPO_ACCESS_TOKEN }}   
         repository: bkebianyor/seal5
         path: /home/runner/work/seal5_prebuilt
-        run-id: ${{ github.event.client_payload.triggered_run_id }}
+        run-id: 11291507122 #${{ github.event.client_payload.triggered_run_id }}
         
     - name: Download Cached GCC Binaries
       id: cache-gcc
